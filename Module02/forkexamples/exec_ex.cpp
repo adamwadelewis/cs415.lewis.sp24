@@ -22,7 +22,8 @@ int main( int argc, char *argv[], char *env[] )
    printf("Parent: my parent's pid is %d\n\n", parent_pid);
 
 /* print error message if fork() fails */
-   if((child_pid = fork()) < 0 )
+   child_pid = fork();
+   if(child_pid < 0 )
    {
       perror("fork failure");
       exit(1);
