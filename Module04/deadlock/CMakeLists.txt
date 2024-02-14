@@ -15,4 +15,6 @@ add_executable(races1 races1.cpp)
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 target_link_libraries(deadlock PRIVATE Threads::Threads)
+target_link_libraries(mutexes PRIVATE Threads::Threads)
+target_link_libraries(races1 PRIVATE Threads::Threads)
 
